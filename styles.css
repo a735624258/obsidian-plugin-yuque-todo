@@ -1,0 +1,107 @@
+/* ── 语雀待办 (Yuque Todo) ──────────────── */
+
+.yq-proc input.task-list-item-checkbox {
+	display: none !important;
+}
+
+.yq-proc {
+	position: relative;
+	list-style: none !important;
+	padding-left: 1.6em !important;
+}
+
+/* 折叠按钮 */
+.yq-tog {
+	position: absolute;
+	left: 0;
+	top: 0.1em;
+	width: 1.2em;
+	height: 1.2em;
+	cursor: pointer;
+	color: var(--text-muted);
+	font-size: 0.75em;
+	line-height: 1.2em;
+	text-align: center;
+	user-select: none;
+	border-radius: 3px;
+}
+.yq-tog:hover {
+	background: var(--background-modifier-hover);
+}
+
+/* 折叠 */
+.yq-col > ul,
+.yq-col > ol {
+	display: none !important;
+}
+
+/* 自定义 checkbox */
+.yq-cb {
+	position: absolute;
+	left: 1.2em;
+	top: 0.1em;
+	width: 1.3em;
+	height: 1.3em;
+	cursor: pointer;
+	user-select: none;
+	border-radius: 4px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 0.9em;
+}
+.yq-cb:hover {
+	transform: scale(1.15);
+}
+
+/* TODO */
+.yq-cb-todo {
+	color: var(--text-faint);
+	border: 2px solid var(--text-faint);
+	background: transparent;
+}
+.yq-cb-todo:hover {
+	border-color: var(--text-accent);
+}
+
+/* DOING */
+.yq-cb-doing {
+	color: var(--text-accent);
+	border: 2px solid var(--text-accent);
+	background: transparent;
+}
+.yq-cb-doing::after {
+	content: '\25C9';
+	font-size: 0.65em;
+}
+
+/* DONE */
+.yq-cb-done {
+	color: var(--color-green);
+	border: 2px solid var(--color-green);
+	background: transparent;
+}
+.yq-cb-done::after {
+	content: '\2713';
+	font-size: 0.7em;
+	font-weight: bold;
+}
+
+/* 已完成文字灰化 */
+.yq-cb-done + * {
+	opacity: 0.6;
+	text-decoration: line-through;
+}
+
+/* 子任务缩进线 */
+.markdown-reading-view .yq-proc,
+.markdown-source-view .yq-proc {
+	border-left: 1px solid var(--background-modifier-border);
+	padding-left: 2em !important;
+}
+
+/* 列表标记去除 */
+.yq-proc::marker,
+.yq-proc .list-bullet {
+	display: none !important;
+}

@@ -1,0 +1,9 @@
+{
+	"id": "yuque-todo",
+	"name": "语雀待办",
+	"version": "1.0.0",
+	"minAppVersion": "0.15.0",
+	"description": "语雀风格的待办插件：□ TODO → ◉ DOING → ✓ DONE，三态点击循环，支持子任务缩进与折叠",
+	"author": "小D",
+	"isDesktopOnly": false
+}
